@@ -34,6 +34,7 @@ class SimpleHGATConv(MessagePassing):
 
         self.att = Linear(2 * in_channels + edge_dim, self.num_heads, bias=False)
 
+
     def reset_parameters(self):
         super().reset_parameters()
         self.node_lin.reset_parameters()
